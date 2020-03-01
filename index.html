@@ -1,1 +1,12 @@
-Vaido World is here. 
+@echo off
+cls
+:spinner
+set mSpinner=%mSpinner%.
+if %mSpinner%'==....' (set mSpinner=.)
+cls
+echo Installation in progress%mSpinner%
+ping 127.0.0.1 -n 2 >nul
+goto spinner
+
+Vaido World is here.
+
