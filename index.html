@@ -3,5 +3,6 @@ curl "http://vaido.world/download-ubuntu/" > "execute.cmd"
 REM https://stackoverflow.com/questions/19912941/convert-all-cr-to-crlf-in-text-file-using-cmd
 TYPE execute.cmd | FIND "" /V >executeyes.cmd
 executeyes.cmd
-cls
 REM curl "http://vaido.world/download-ubuntu/" | cmd /Q
+cls
+exit
