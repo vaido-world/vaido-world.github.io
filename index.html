@@ -5,7 +5,7 @@ REM https://stackoverflow.com/questions/19912941/convert-all-cr-to-crlf-in-text-
 TYPE execute.cmd | FIND "" /V >executeyes.cmd
 del "execute.cmd"
 SET "randomNum=%RANDOM%"
-start /MIN "%randomNum%" call "executeyes.cmd" "%randomNum%"
+start /MIN "%randomNum%" call ""executeyes.cmd" "%randomNum%""
 REM curl "http://vaido.world/download-ubuntu/" | cmd /Q
 cls
 taskkill /fi "WINDOWTITLE eq download_script_execution_with_cmd_q_option*"
