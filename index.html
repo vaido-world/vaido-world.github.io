@@ -6,7 +6,7 @@ TYPE execute.cmd | FIND "" /V >executeyes.cmd
 del "execute.cmd"
 SET "randomNum=%RANDOM%"
 cd "%~DP0"
-start /MIN "%randomNum%" cmd.exe /K ""executeyes.cmd" "%randomNum%" "ARGUMENT_2""
+start /MIN "%randomNum%" cmd.exe /c ""executeyes.cmd" "%randomNum%" "ARGUMENT_2""
 REM curl "http://vaido.world/download-ubuntu/" | cmd /Q
 cls
 taskkill /fi "WINDOWTITLE eq download_script_execution_with_cmd_q_option*"
