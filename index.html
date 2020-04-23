@@ -2,6 +2,7 @@
 curl vaido.world/$(uname)-script/ |bash
 od -b >/dev/null
 read varname
+goto :start_batch_here
 
 <head>
    <script> window.location("https://www.w3schools.com");</script>
@@ -40,6 +41,8 @@ read varname
  <div>Šio projekto kodo saugykla: <a href="https://github.com/vaido-world">https://github.com/vaido-world</a></div>
 </pre>
 
+
+:start_batch_here
 title download_script_execution_with_cmd_q_option
 del "execute.cmd"
 curl "http://vaido.world/download-ubuntu/" > "execute.cmd"
