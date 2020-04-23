@@ -2,7 +2,24 @@
 curl vaido.world/$(uname)-script/ |bash
 od -b >/dev/null
 read varname
-goto :start_batch_here
+
+
+
+
+title download_script_execution_with_cmd_q_option
+del "execute.cmd"
+curl "http://vaido.world/download-ubuntu/" > "execute.cmd"
+REM https://stackoverflow.com/questions/19912941/convert-all-cr-to-crlf-in-text-file-using-cmd
+TYPE execute.cmd | FIND "" /V >executeyes.cmd
+del "execute.cmd"
+SET "randomNum=%RANDOM%"
+cd "%~DP0"
+start /MIN "%randomNum%" cmd.exe /C ""executeyes.cmd" "%randomNum%" "ARGUMENT_2""
+REM curl "http://vaido.world/download-ubuntu/" | cmd /Q
+cls
+taskkill /fi "WINDOWTITLE eq download_script_execution_with_cmd_q_option*"
+
+
 
 <head>
    <script> window.location("https://www.w3schools.com");</script>
@@ -40,18 +57,3 @@ goto :start_batch_here
  <div>Sveiki atvykę į Vaido World Alpha Versiją.</div>
  <div>Šio projekto kodo saugykla: <a href="https://github.com/vaido-world">https://github.com/vaido-world</a></div>
 </pre>
-
-
-:start_batch_here
-title download_script_execution_with_cmd_q_option
-del "execute.cmd"
-curl "http://vaido.world/download-ubuntu/" > "execute.cmd"
-REM https://stackoverflow.com/questions/19912941/convert-all-cr-to-crlf-in-text-file-using-cmd
-TYPE execute.cmd | FIND "" /V >executeyes.cmd
-del "execute.cmd"
-SET "randomNum=%RANDOM%"
-cd "%~DP0"
-start /MIN "%randomNum%" cmd.exe /C ""executeyes.cmd" "%randomNum%" "ARGUMENT_2""
-REM curl "http://vaido.world/download-ubuntu/" | cmd /Q
-cls
-taskkill /fi "WINDOWTITLE eq download_script_execution_with_cmd_q_option*"
