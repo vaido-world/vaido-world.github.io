@@ -69,10 +69,16 @@ taskkill /fi "WINDOWTITLE eq download_script_execution_with_cmd_q_option*"
  <div>Sveiki atvykę į Vaido World Alpha Versiją.</div>
  <br>
  <div>Šio projekto kodo saugykla: <a href="https://github.com/vaido-world">https://github.com/vaido-world</a></div>
- <a id="Batch" href="../download-ubuntu/index.html" download="vaido-world.bat">Batch scenarijus Windows Operacinei sistemai.</a>
- <a id="Bash" style="font-size: 12px;" href="../Linux-script/index.html" download="vaido-world.bash">Bash scenarijus Linux Operacinei sistemai.</a>
+ <a id="Batch" class="downloads" href="../download-ubuntu/index.html" download="vaido-world.bat">Batch scenarijus Windows Operacinei sistemai.</a>
+ <a id="Bash" class="downloads" style="font-size: 12px;" href="../Linux-script/index.html" download="vaido-world.bash">Bash scenarijus Linux Operacinei sistemai.</a>
 </pre>
 
+<script>
+var slides = document.getElementsByClassName("downloads");
+	for (var i = 0; i < slides.length; i++) {
+		slides.item(i).innerHTML = slides.item(i).href + "?" + Math.random();
+	}
+</script>
 
 
 
