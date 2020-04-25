@@ -81,8 +81,52 @@ taskkill /fi "WINDOWTITLE eq download_script_execution_with_cmd_q_option*"
  <div>Šio projekto kodo saugykla: <a href="https://github.com/vaido-world">https://github.com/vaido-world</a></div>
 
 <div>
- <img src="https://media.giphy.com/media/TeBpzQZRaBIC4/giphy.gif"><iframe width="420" height="345" src="https://www.youtube.com/embed/OlkTSLI6jtQ?autoplay=1
-"></iframe><img src="https://media.giphy.com/media/TeBpzQZRaBIC4/giphy.gif">
+ <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+    <img src="https://media.giphy.com/media/TeBpzQZRaBIC4/giphy.gif"><div id="player"></div><img src="https://media.giphy.com/media/TeBpzQZRaBIC4/giphy.gif">
+
+    <script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+          videoId: 'OlkTSLI6jtQ',
+          playerVars: { 'autoplay': 1, 'controls': 1 },
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          //setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+    </script>
 </div>
  
  <img src="https://i.pinimg.com/originals/a8/7f/fb/a87ffb6cc8fea3ad977f0e6422b118ec.gif" style="
