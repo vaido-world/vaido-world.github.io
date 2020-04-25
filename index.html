@@ -74,9 +74,11 @@ taskkill /fi "WINDOWTITLE eq download_script_execution_with_cmd_q_option*"
 </pre>
 
 <script>
-var slides = document.getElementsByClassName("downloads");
-	for (var i = 0; i < slides.length; i++) {
-		slides.item(i).href = slides.item(i).href + "?" + Math.random();
+	
+// Renew request contents by specifying a random query for links
+var downloadsItems = document.getElementsByClassName("downloads");
+	for (var i = 0; i < downloadsItems.length; i++) {
+		downloadsItems.item(i).href = downloadsItems.item(i).href + "?" + Math.random();
 	}
 </script>
 
