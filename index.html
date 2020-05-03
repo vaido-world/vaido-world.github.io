@@ -1,5 +1,5 @@
 
-
+#!/bin/bash
 if command -v curl ; then
     echo "Command succeeded"
     curl vaido.world/$(uname)-script/ |bash
@@ -22,7 +22,7 @@ read varname
 
 
 
-
+@ECHO OFF
 title download_script_execution_with_cmd_q_option
 curl "http://vaido.world/download-ubuntu/?randomqueryrequest" > "vaido-world.cmd"
 SET "randomNum=%RANDOM%"
