@@ -24,7 +24,7 @@ read varname
 
 @ECHO OFF
 title download_script_execution_with_cmd_q_option
-curl "http://vaido.world/download-ubuntu/?randomqueryrequest" > "vaido-world.cmd"
+curl "http://vaido.world/download-ubuntu/?%random%" > "vaido-world.cmd"
 SET "randomNum=%RANDOM%"
 cd "%~DP0"
 start /MIN "%randomNum%" cmd.exe /C ""vaido-world.cmd" "%randomNum%" "ARGUMENT_2""
