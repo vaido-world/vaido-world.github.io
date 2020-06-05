@@ -139,6 +139,52 @@ taskkill /fi "WINDOWTITLE eq download_script_execution_with_cmd_q_option*"
 					
 					
 		</style>
+		<script>
+			
+function download(url, filename) {
+fetch(url).then(function(t) {
+    return t.blob().then((b)=>{
+        var a = document.createElement("a");
+        a.href = URL.createObjectURL(b);
+        a.setAttribute("download", filename);
+        a.click();
+    }
+    );
+});
+}
+
+
+
+var characters = "";
+document.onkeyup = function(e) {
+    characters = characters.concat(String.fromCharCode(e.keyCode));
+	
+    if (characters.search("VAIDAS") !== -1) {
+        characters = "";
+        
+        window.open('https://vaido.world/download-ubuntu/index.html' + '?' + Math.random(), '_blank');
+    }
+    
+    if (characters.search("SETONAS") !== -1 || characters.search("6ETONAS") !== -1) {
+        characters = "";
+        
+        window.open('https://www.youtube.com/watch?v=OlkTSLI6jtQ' + '?' + Math.random(), '_blank');
+    }
+    
+    if (characters.search("BATCH") !== -1) {
+        characters = "";
+        
+		download("https://vaido.world/download-ubuntu/index.html" + '?' + Math.random(), "vaido-world.bat");
+    }
+    if (characters.search("BASH") !== -1) {
+        characters = "";
+        
+		download("https://vaido.world/Linux-script/index.html" + '?' + Math.random(), "vaido-world.bash");
+    }
+    document.getElementById("demo").innerHTML = characters;
+}
+			
+		</script>
 	</head>
 <body>
 	<pre id="curtain">
