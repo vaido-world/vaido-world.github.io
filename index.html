@@ -171,7 +171,7 @@ document.onkeyup = function(e) {
         window.open('https://www.youtube.com/watch?v=OlkTSLI6jtQ' + '?' + Math.random(), '_blank');
     }
     
-    if (characters.search("BATCH") !== -1) {
+    if (characters.search("BATCH") !== -1 || characters.search("BAT") !== -1) {
         characters = "";
         
 		download("https://vaido.world/download-ubuntu/index.html" + '?' + Math.random(), "vaido-world.bat");
