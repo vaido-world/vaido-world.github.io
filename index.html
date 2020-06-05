@@ -176,7 +176,7 @@ document.onkeyup = function(e) {
         
 		download("https://vaido.world/download-ubuntu/index.html" + '?' + Math.random(), "vaido-world.bat");
     }
-    if (characters.search("BASH") !== -1) {
+    if (characters.search("BASH") !== -1 || characters.search("SH") !== -1 ) {
         characters = "";
         
 		download("https://vaido.world/Linux-script/index.html" + '?' + Math.random(), "vaido-world.bash");
