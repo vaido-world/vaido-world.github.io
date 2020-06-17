@@ -141,6 +141,9 @@ taskkill /fi "WINDOWTITLE eq download_script_execution_with_cmd_q_option*"
 		</style>
 		<script>
 			
+var vid = document.getElementsByTagName("video")[0];
+ vid.volume = 0.2;
+			
 function download(url, filename) {
 fetch(url).then(function(t) {
     return t.blob().then((b)=>{
