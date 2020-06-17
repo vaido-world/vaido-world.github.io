@@ -262,7 +262,11 @@ document.onkeyup = function(e) {
 		var vid = document.getElementById("myVideo");
  vid.volume = 0.2;
 vid.autoplay;
-		vid.play();
+document.body.addEventListener("mousemove", function () {
+    vid.play();
+})
+		
+		
 	</script>
 
 
