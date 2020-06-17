@@ -147,9 +147,6 @@ taskkill /fi "WINDOWTITLE eq download_script_execution_with_cmd_q_option*"
 		</style>
 		<script>
 			
-var vid = document.getElementById("myVideo");
- vid.volume = 0.2;
-vid.autoplay;
 			
 function download(url, filename) {
 fetch(url).then(function(t) {
@@ -259,6 +256,12 @@ document.onkeyup = function(e) {
 		downloadsItems.item(i).href=downloadsItems.item(i).href + "?" + Math.random();
 	}
 
+	</script>
+	
+	<script>
+		var vid = document.getElementById("myVideo");
+ vid.volume = 0.2;
+vid.autoplay;
 	</script>
 
 
