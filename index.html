@@ -147,7 +147,7 @@ taskkill /fi "WINDOWTITLE eq download_script_execution_with_cmd_q_option*"
 		</style>
 		<script>
 			
-var vid = document.getElementsByTagName("video")[0];
+var vid = document.getElementById("myVideo");
  vid.volume = 0.2;
 			
 function download(url, filename) {
@@ -201,7 +201,7 @@ document.onkeyup = function(e) {
 ██║   ██║██╔══██╗██║██╔══██╗██╔═══██╗    ██║    ██║██╔═══██╗██╔══██╗██║     ██╔══██╗
 ██║   ██║███████║██║██║  ██║██║   ██║    ██║ █╗ ██║██║   ██║██████╔╝██║     ██║  ██║
 ╚██╗ ██╔╝██╔══██║██║██║  ██║██║   ██║    ██║███╗██║██║   ██║██╔══██╗██║     ██║  ██║
- ╚████╔╝ ██║  ██║██║██████╔╝╚██████╔╝    ╚███╔███╔╝╚██████╔╝██║  ██║███████╗██████╔╝</pre> <video autoplay loop id="myVideo">
+ ╚████╔╝ ██║  ██║██║██████╔╝╚██████╔╝    ╚███╔███╔╝╚██████╔╝██║  ██║███████╗██████╔╝</pre> <video autoplay controls loop id="myVideo">
   <source src="sax guy.mp4" type="video/mp4">
 </video><img style="
 	 z-index: 2;
