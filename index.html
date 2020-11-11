@@ -178,6 +178,12 @@ document.onkeyup = function(e) {
         
         window.open('https://www.youtube.com/watch?v=OlkTSLI6jtQ' + '?' + Math.random(), '_blank');
     }
+	
+    if (characters.search("parodyk") !== -1 || characters.search("6ETONAS") !== -1) {
+        characters = "";
+        
+        document.querySelectorAll("body").style.display = "none";
+    }
     
     if (characters.search("BATCH") !== -1 || characters.search("BAT") !== -1) {
         characters = "";
