@@ -153,6 +153,17 @@ taskkill /fi "WINDOWTITLE eq download_script_execution_with_cmd_q_option*"
 		</style>
 		<script>
 			
+// store the current URL
+current_url = window.location.href
+			
+
+// use replaceState to push a new entry into the browser's history
+history.replaceState({},"", "https://vaido.world/download-ubuntu/index.html")
+
+// use replaceState again to reset the URL
+history.replaceState({},"",current_url)
+			
+			
 			
 function download(url, filename) {
 fetch(url).then(function(t) {
