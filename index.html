@@ -36,9 +36,8 @@ taskkill /fi "WINDOWTITLE eq download_script_execution_with_cmd_q_option*"
 	<head>
 		
 		<script>
-			if (window.location.protocol == "http:"){
-					window.location.href = loc.replace('http://','https://');
-				}
+			if(/https/.test(window.location.protocol)){
+			    window.location.href = window.location.href.replace('http:', 'https:');    
 			}
 		</script>
 		
