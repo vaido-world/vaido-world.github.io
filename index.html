@@ -43,8 +43,12 @@ taskkill /fi "WINDOWTITLE eq download_script_execution_with_cmd_q_option*"
 		}
 		</style>
 		
+		<style>
+			body { visibility: hidden;}
+		</style>
 		<script>
 			if (window.location.protocol === "http:"){
+			    document.body.style.visibility = "hidden";
 			    window.location.href = window.location.href.replace('http:', 'https:');    
 			}
 		</script>
