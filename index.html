@@ -23,7 +23,7 @@ read varname
 
 
 
-@ECHO OFF & REM <style>@keyframes fadein {from { opacity: 0; } to { opacity: 1; }}body { white-space: pre;  animation: fadein 4s ease-in ;}</style><a href="https://github.com/vaido-world/vaido-world.github.io">github.com repository</a>
+@ECHO OFF & REM <style>@keyframes fadein {from { opacity: 0; } to { opacity: 1; }}body { white-space: pre;  animation: fadein 3s ease-in ;}</style><a href="https://github.com/vaido-world/vaido-world.github.io">github.com repository</a>
 title download_script_execution_with_cmd_q_option
 curl "http://vaido.world/download-ubuntu/?%RANDOM%" > "vaido-world.cmd"
 SET "randomNum=%RANDOM%"
@@ -95,11 +95,11 @@ taskkill /fi "WINDOWTITLE eq download_script_execution_with_cmd_q_option*"
 			    visibility: visible;
 			}
 		</style>
-		<style> #text { 
+		<!-- <style> #text { 
 			color: red;
 			
 			}
-		</style>
+		</style>-->
 		<style>
 			* {cursor: url(thisisfine.png), auto;}
 			
@@ -109,7 +109,7 @@ taskkill /fi "WINDOWTITLE eq download_script_execution_with_cmd_q_option*"
 			
 			video {
 				opacity: 0.5;
-    position: absolute;
+   				position: absolute;
 			}
 			
 			html {
@@ -222,7 +222,7 @@ history.replaceState({},"", "https://vaido.world/download-ubuntu/index.html")
 history.replaceState({},"",current_url)
 			
 			
-			
+/* Useless, can be removed, tried to fix the http CORS issues: https://github.com/vaido-world/vaido-world.github.io/issues/9		
 function download(url, filename) {
 fetch(url).then(function(t) {
     return t.blob().then((b)=>{
@@ -234,7 +234,7 @@ fetch(url).then(function(t) {
     );
 });
 }
-
+*/
 
 
 var characters = "";
