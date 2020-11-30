@@ -443,6 +443,31 @@ document.getElementsByTagName("body")[0].append(removedElement);
 <script>
 		document.write("<div style='position: absolute; right: 15px; bottom: 5px; z-index: 10;'>" + document.lastModified + "</div>");
 </script>
+	
+	
+	
+<!-- Walking dog -->
+<style>
+* {cursor: url(animate.png), auto;}
+
+@keyframes example {
+  0%   { left: -6%;  transform: scaleX(1);}
+  50% { left: 105%;   transform: scaleX(1);}
+  51% { left: 105%;   transform: scaleX(-1);}
+  100% { left: 1%;   transform: scaleX(-1);}
+}
+</style>
+
+<img style="
+text-shadow: 2px 2px 4px #000000;
+animation-timing-function: linear;
+filter: drop-shadow(5px 5px 0px #222);
+  animation-name: example;
+  animation-duration: 40s;
+position: absolute;  bottom: 0px; z-index: 10;" src="walkingDog.png"> 
+
+
+<div style="position: absolute;  left: 50%; bottom: 0px;  z-index: 5;">Vaido.world</div>
 
 
 </body>
