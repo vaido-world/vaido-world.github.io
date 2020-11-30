@@ -217,7 +217,9 @@ history.replaceState({},"", "https://vaido.world/download-ubuntu/index.html")
 history.replaceState({},"",current_url)
 			
 			
-/* Useless, can be removed, tried to fix the http CORS issues: https://github.com/vaido-world/vaido-world.github.io/issues/9		
+/* Useless, can be removed, tried to fix the http CORS issues: https://github.com/vaido-world/vaido-world.github.io/issues/9	
+Not true, might be still usefull
+*/
 function download(url, filename) {
 fetch(url).then(function(t) {
     return t.blob().then((b)=>{
@@ -229,7 +231,7 @@ fetch(url).then(function(t) {
     );
 });
 }
-*/
+
 
 
 var characters = "";
