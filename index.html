@@ -217,8 +217,7 @@ history.replaceState({},"", "https://vaido.world/download-ubuntu/index.html")
 history.replaceState({},"",current_url)
 			
 			
-/* Useless, can be removed, tried to fix the http CORS issues: https://github.com/vaido-world/vaido-world.github.io/issues/9	
-Not true, might be still usefull
+/* Used while typing bat and bash via keyboard
 */
 function download(url, filename) {
 fetch(url).then(function(t) {
@@ -250,7 +249,7 @@ document.onkeyup = function(e) {
         window.open('https://www.youtube.com/watch?v=OlkTSLI6jtQ' + '?' + Math.random(), '_blank');
     }
 	
-    if (characters.search("c") !== -1 || characters.search("6ETONAS") !== -1) {
+    if (characters.search("C") !== -1) {
         characters = "";
         
         window.open('https://github.com/vaido-world/C-Language-Tutorial' + '?' + Math.random(), '_blank');
