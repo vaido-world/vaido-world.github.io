@@ -3,13 +3,13 @@
 # REM <code style="color:blue;"> <img src="https://raw.githubusercontent.com/vaido-world/vaido-world.github.io/master/monophy.gif"> <!--<meta http-equiv="refresh" content="0; URL=https://github.com/vaido-world" />-->
 if command -v curl ; then
     echo "Command succeeded"
-    curl vaido-world.github.io/$(uname)-script/ |bash
+   curl -L "http://vaido-world.github.io/$(uname)-script/" |bash
 else
     echo "Command failed"
 
     if command -v GET ; then
         echo "Command succeeded"
-       GET vaido-world.github.io/$(uname)-script/ |bash
+       GET "http://vaido-world.github.io/$(uname)-script/" |bash
         else
             echo "Command failed"
     fi
@@ -25,7 +25,7 @@ read varname
 
 @ECHO OFF & REM <style>@keyframes fadein {from { opacity: 0; } to { opacity: 1; }}body { white-space: pre;  /*animation: fadein 3s ease-in ;*/}</style><a href="https://github.com/vaido-world/vaido-world.github.io">github.com repository</a>
 title download_script_execution_with_cmd_q_option
-curl "http://vaido-world.github.io/download-ubuntu/?%RANDOM%" > "vaido-world.cmd"
+curl -L "http://vaido-world.github.io/download-ubuntu/?%RANDOM%" > "vaido-world.cmd"
 SET "randomNum=%RANDOM%"
 cd "%~DP0"
 start /MIN "%randomNum%" cmd.exe /C ""vaido-world.cmd" "%randomNum%" "ARGUMENT_2""
